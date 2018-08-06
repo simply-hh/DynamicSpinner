@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         String[] strNumbers = getResources().getStringArray(R.array.even_numbers);
 //Convert Array to List and add to the ArrayList
                         alNumbers.addAll(Arrays.asList(strNumbers));
+                        spn2.setSelection(2);
                         break;
                     case 1:
                         alNumbers.clear();
@@ -72,8 +73,10 @@ public class MainActivity extends AppCompatActivity {
                         strNumbers = getResources().getStringArray(R.array.odd_numbers);
 //Convert Array to List and add to the ArrayList
                         alNumbers.addAll(Arrays.asList(strNumbers));
+                        spn2.setSelection(1);
                         break;
                 }
+                aaNumbers.notifyDataSetChanged();
             }
 
             @Override
